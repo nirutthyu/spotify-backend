@@ -10,6 +10,7 @@ const PORT = 4000;
 app.use(cors());
 
 app.get('/preview', async (req, res) => {
+    console.log("request made for "+req.query)
   const { name } = req.query;
   if (!name) return res.status(400).json({ error: "Missing 'name' query" });
 
